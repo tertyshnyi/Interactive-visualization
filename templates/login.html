@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/139/139706.png" type="image/x-icon">
+</head>
+<body>
+    <div class="center">
+        <p class="login-text">Log In</p>
+        <form action="/login" method="post">
+            {{ form.hidden_tag() }}
+            <input class="text-field" type="email" name="email" placeholder="Email" required>
+            <input class="text-field" type="password" name="password" placeholder="Password" required>
+            <button class="btn-login" type="submit">Log In</button>
+            <div class="signup-field">
+                <a class="signup-text" href="/register">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

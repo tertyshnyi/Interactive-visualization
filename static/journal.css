@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+}
+.wrapper{
+    height: 100vh;
+}
+.left{
+    background: url(/static/background.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.left-content > div{
+    background: white;
+    padding: 4rem 4rem 2.5rem 5rem;
+    text-align: center;
+}
+.left-content{
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+}
+.img img{
+    display: block;
+    width: 200px;
+    height: 210px;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.shadow{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+.shadow::after{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    height: 7px;
+    width: 50px;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.shadow:hover .img{
+    transform: translateY(-10px);
+}
+.shadow:hover::after{
+    opacity: 1;
+}
+.left-content h2{
+    font-size: 2rem;
+    margin: 2.2rem 0 0.6rem 0;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #edffec;
+}
+.springer{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: -8%;
+}
+.springer img{
+    width: 150px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    text-align: center;
+}
+.right h2{
+    font-weight: 600;
+}
+.para p{
+    font-weight: 300;
+    padding: 0.5rem;
+    opacity: 0.8;
+    text-align: left;
+}
+
+@media screen and (min-width: 992px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .left{
+        position: relative;
+    }
+    .left-content{
+        position: absolute;
+        right: -50px;
+    }
+}
+
+

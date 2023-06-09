@@ -1,0 +1,150 @@
+@media screen and (min-device-width: 500px) {
+   html {
+       min-height: 100%;
+       transition-duration: 1000s;
+       background-image: url(https://wallpaperaccess.com/full/1329173.jpg);
+       background-size: cover;
+       background-repeat: no-repeat;
+       min-height: 100%;
+   }
+
+   html:hover {
+       transition-duration: 100s;
+       margin-left: -80%;
+   }
+
+   .center {
+       width: 500px;
+       height: 370px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       -webkit-backdrop-filter: blur(10px);
+       backdrop-filter: blur(16px) saturate(180%);
+       background-color: rgba(0, 0, 0, 0.47);
+       border-width: 2px;
+       border-style: solid;
+       border-radius: 25px;
+       border-color: rgba(0, 0, 0, 0);
+       border-bottom-color: #277ec0;
+       padding: 10px;
+       text-align: center;
+   }
+}
+
+    .signup-field {
+        margin-top: 26px;
+    }
+
+    .signup-text {
+        font-size: 15px;
+        color: #b3e2ff;
+        font-family: Arial;
+        text-decoration: none;
+        padding: 7px;
+    }
+
+    .login-text {
+        font-size: 35px;
+        font-family: "Arial";
+        color: #fafdff;
+    }
+
+    .text-field {
+        font-family: "Arial";
+        font-size: 20px;
+        padding: 10px;
+        width: 70%;
+        height: 30px;
+        margin-bottom: 20px;
+        background-color: #b3e2ff;
+        border-radius: 10px;
+        border-color: black;
+        border-style: solid;
+        border-width: 0px;
+        box-shadow: 0 0 15px #719ECE;
+        transition-duration: 0.2s;
+    }
+
+    .text-field:hover {
+        transition-duration: 0.3s;
+        border: none;
+        width: 72%;
+    }
+
+    .text-field:focus {
+
+        /*width: 75%;*/
+        outline: none;
+        border:0px solid black;
+    }
+
+    .btn-login {
+        margin-top: 25px;
+        width: 75%;
+        height: 40px;
+        padding: 10px;
+        border-color: black;
+        border-width: 0px;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: #009eff;
+        transition-duration: 0.2s;
+        font-size: 20px;
+        color: black;
+        font-family: "Arial" ;
+        font-weight: bolder;
+    }
+
+    .btn-login:hover {
+        transition-duration: 0.2s;
+        background-color: #0077ff;
+    }
+
+    ::placeholder {
+        color: #47719d;
+        opacity: 1;
+    }
+
+    @media screen and (max-device-width: 500px) {
+        ::placeholder {
+            color: rgba(108, 98, 79, 0.73);
+            opacity: 1;
+        }
+
+        .text-field {
+            background-color: rgba(255, 243, 211, 0.73);
+            box-shadow: none;
+        }
+
+        .btn-login {
+            background-color: rgba(255, 183, 0, 0.73);
+        }
+
+        .center {
+            width: 80%;
+            height: 360px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.55);
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0);
+            border-bottom-color: rgba(255, 183, 0, 0.73);
+            padding: 10px;
+            text-align: center;
+        }
+        html {
+            background-image: url(https://e0.pxfuel.com/wallpapers/590/801/desktop-wallpaper-planet-earth-space-digital-art-codes-phone-background-and-mocah.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100%;
+        }
+
+    }
