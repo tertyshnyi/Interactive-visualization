@@ -8,7 +8,7 @@ This can help optimize resource allocation and enhance collaboration in the rese
 https://github.com/tertyshnyi/Interactive-visualization/assets/131376511/40a0db6b-049c-443c-b06c-a110160c4bab
 
 
-# The frameworks and libraries used
+# Frameworks and libraries used
 + Flask
 + Dash
 + Folium
@@ -16,9 +16,18 @@ https://github.com/tertyshnyi/Interactive-visualization/assets/131376511/40a0db6
 + Nominatim
 + Pandas
 + Requests
++ Flask-WTF
++ Flask-Login
++ Flask-Bcrypt
++ Flask-SQLAlchemy
++ Csv
++ Datetime
++ Time
++ Threading
++ Ast
 
 
-# The data storage
+# Data storage
 + SQLite3
 + Csv
 
