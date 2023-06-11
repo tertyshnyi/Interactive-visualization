@@ -1,0 +1,15 @@
+version: '3'
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6060:6060
+    volumes:
+      - ./instance:/app/instance
+      - ./static:/app/static
+      - ./templates:/app/templates
+      - ./assets:/app/assets
+      - ./components:/app/components
+      - ./data:/app/data
