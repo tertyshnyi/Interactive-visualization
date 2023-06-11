@@ -8,6 +8,7 @@ from dash import html, dcc
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
+from sqlalchemy.orm import sessionmaker
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError, Email
 from flask_bcrypt import Bcrypt
@@ -25,11 +26,10 @@ authors_locations_data = pd.read_csv('data/correct_authors_locations.csv')
 nav = navbar.navbar()
 
 server = Flask(__name__)
-db = SQLAlchemy(server)
+db = SQLAlchemy()
 bcrypt = Bcrypt(server)
 server.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 server.config['SECRET_KEY'] = 'eor125ihjerelhnerop4574572irykmj23626klKJNERLHNER$@1KM'
-
 login_manager = LoginManager()
 login_manager.init_app(server)
 login_manager.login_view = 'login'
@@ -37,7 +37,10 @@ login_manager.login_view = 'login'
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    with server.app_context():
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        return session.query(User).filter_by(id=user_id).first()
 
 
 class User(db.Model, UserMixin):
@@ -46,7 +49,9 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(20), nullable=False)
 
 
-db.create_all()
+with server.app_context():
+    db.init_app(server)
+    db.create_all()
 
 
 class RegisterForm(FlaskForm):
