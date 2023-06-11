@@ -6,3 +6,4 @@ requests~=2.31.0
 geopy~=2.3.0
 beautifulsoup4~=4.12.2
 folium~=0.14.0
+SQLAlchemy~=2.0.16
