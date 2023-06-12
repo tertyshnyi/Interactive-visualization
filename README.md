@@ -37,5 +37,5 @@ https://github.com/tertyshnyi/Interactive-visualization/assets/131376511/40a0db6
 + CSS3
 
 
-# Technolosies
+# Technologies
 + Docker
