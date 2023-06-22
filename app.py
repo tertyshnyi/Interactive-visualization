@@ -156,4 +156,4 @@ def update_data_periodically():
 
 if __name__ == "__main__":
     threading.Thread(target=update_data_periodically).start()
-    server.run(host='147.232.182.91', debug=True, port=8030)
+    server.run(host='0.0.0.0', debug=True, port=8030)
